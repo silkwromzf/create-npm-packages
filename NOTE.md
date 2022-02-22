@@ -11,4 +11,6 @@
 > 1. eslint 的配置和层级问题、格式化的层级问题
 
 ## 验证步骤
-- 第一步新建一个空的项目包, 使用lerna 进行初始化
+### 第一步新建一个空的项目包, 使用lerna 进行初始化
+1. 使用`lerna init --independent`, 每个包拥有独立的版本
+2. 添加yarn work space。
