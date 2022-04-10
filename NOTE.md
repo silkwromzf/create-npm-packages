@@ -22,8 +22,15 @@
 ### 第二步，发布一个 npm 包。
 
 1. 发布一个简单的 js 文件包
+    - 在lerna项目中发布包的时候 无法`npm login`,[https://github.com/npm/cli/issues/4477]
+    - [创建并发布一个npm 包](https://juejin.cn/post/6987695534504935438)
+        - `npm login`
+        - `npm publish`
+        - nrm一定要切换到npm 源
 2. 了解 js 文件的打包方式 生成文件有哪几种模式
+    - [https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm]
 3. 发布到 npm 链接
+    `npm publish` 更新版本也是
 4. 安装依赖并使用
 
 ### 第三步，在当前发布的包中实验一下项目,主要侧重于功能、生效层级
