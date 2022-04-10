@@ -34,8 +34,9 @@
 4. 安装依赖并使用
 
 ### 第三步，在当前发布的包中实验一下项目,主要侧重于功能、生效层级
-- editorconfig
 - gitignore
+    > 层级覆盖
+- editorconfig
 - eslint, tslint
 - tsconfig
 - prettierrc
