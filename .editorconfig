@@ -1,21 +1,51 @@
-root = true
+# http://editorconfig.org  (Editorconfig 的官方网站)
+# [editorConfig介绍 译](http://www.alloyteam.com/2014/12/editor-config/)
+# [.editorConfig 编辑器配置说明](https://blog.csdn.net/weixin_42617917/article/details/115773823)
+# 控制 EditorConfig 约定的范围 
+root = true 
 
-[*.{js,jsx,ts,tsx,vue}]
+# 匹配全部文件
+[*]
+
+# 设置字符集
+charset = utf-8
+
+# 缩进风格 可选"space"、"tab"
 indent_style = space
+
+# 缩进大小 可以是数字（空格数）， tab(如果tab大小没设置则按编辑器默认tab大小)
 indent_size = 2
-trim_trailing_whitespace = true
+
+# tab的宽度
+tab_width = 4
+
+# 结尾换行符，可选"lf"、"cr"、"crlf"
+end_of_line = lf
+
+# 文件最后插入一个空行
 insert_final_newline = true
 
-[*]
-charset=utf-8
-end_of_line=CRLF
-insert_final_newline=true
-indent_style=space
-indent_size=2
+# 删除行尾空格
+trim_trailing_whitespace = true
 
-[*.yml]
-indent_style = space
-indent_size = 2
+# 匹配.java结尾的文件
+[*.java]
 
+# 匹配.md结尾的文件
 [*.md]
 trim_trailing_whitespace = false
+
+# [*.{js,jsx,ts,tsx,vue}]
+
+# indent_style = space
+# indent_size = 2
+# trim_trailing_whitespace = true
+# insert_final_newline = true
+
+# [*.yml]
+# indent_style = space
+# indent_size = 2
+
+# [*.md]
+# insert_final_newline = false
+# trim_trailing_whitespace = false

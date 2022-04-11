@@ -44,6 +44,8 @@
    - 如果同一目录下 .eslintrc 和 package.json 同时存在，.eslintrc 优先级高会被使用，package.json 文件将不会被使用。
 - tsconfig
 - prettierrc
+    [https://www.cnblogs.com/Yellow-ice/p/15127392.html]
+
 
 ### 第四步，.d.ts 文件的层级  以及如何单独导出@types声明项目并使用
 
