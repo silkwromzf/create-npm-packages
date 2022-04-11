@@ -38,6 +38,10 @@
     > 层级覆盖
 - editorconfig
 - eslint, tslint
+   - [https://cn.eslint.org/docs/user-guide/configuring#configuring-plugins]
+   - ESLint 将自动在要检测的文件目录里寻找它们，紧接着是父级目录，一直到文件系统的根目录（除非指定 `root: true`）。
+   - 当 ESLint 遍历到 test/ 目录，your-project/.eslintrc 之外，它还会用到 your-project/tests/.eslintrc。所以 your-project/tests/test.js 是基于它的目录层次结构中的两个.eslintrc 文件的组合，并且离的最近的一个优先。通过这种方式，你可以有项目级 ESLint 设置，也有覆盖特定目录的 ESLint 设置。
+   - 如果同一目录下 .eslintrc 和 package.json 同时存在，.eslintrc 优先级高会被使用，package.json 文件将不会被使用。
 - tsconfig
 - prettierrc
 

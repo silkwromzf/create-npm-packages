@@ -15,6 +15,7 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 2020,
+    requireConfigFile: false,
   },
   rules: {
      // 在导出的函数和类的公共类方法上需要显式的返回值和参数类型
