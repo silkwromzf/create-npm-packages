@@ -45,8 +45,56 @@
 - tsconfig
 - prettierrc
     [https://www.cnblogs.com/Yellow-ice/p/15127392.html]
+    #### 添加eslint
+    1. `yarn add eslint -D`
+    2. `yarn eslint --init`
+    3. `yarn add prettier eslint-config-prettier eslint-plugin-prettier -D`
+    4. 配置.eslintrc.js
+        ``` js
+        module.exports = {
+            root: true,
+            env: {
+                browser: true,
+                es2021: true,
+                node: true,
+                'vue/setup-compiler-macros': true,
+            },
+            extends: [
+                'eslint:recommended',
+                'plugin:vue/vue3-recommended',
+                'plugin:@typescript-eslint/recommended',
+                'airbnb-base',
+                'plugin:prettier/recommended',
+            ],
+            parserOptions: {
+                ecmaVersion: 'latest',
+                parser: '@typescript-eslint/parser',
+                sourceType: 'module',
+            },
+            plugins: ['vue', '@typescript-eslint'],
+            overrides: [
+                {
+                    files: ['*.vue'],
+                    parser: 'vue-eslint-parser',
+                    parserOptions: {
+                        parser: '@typescript-eslint/parser',
+                    },
+                },
+            ],
+            rules: {},
+        };
 
-
+        ```
+    5. 添加yarn script
+        ``` json
+        // ....
+            "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+            "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}",
+        //...
+        ```
+ - husky
+    1. `yarn add husky lint-staged -D`
+    2. [commitlint](https://github.com/conventional-changelog/commitlint#getting-started)
 ### 第四步，.d.ts 文件的层级  以及如何单独导出@types声明项目并使用
 
 ### 第五步，npm包如何进编译  对于各个格式的文件怎么进行编译
